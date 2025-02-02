@@ -1,0 +1,23 @@
+INSERT INTO Cliente (ID_Cliente, Nome, Endereço, Telefone, Email) VALUES
+(1, 'João Silva', 'Rua A, 123', '123456789', 'joao@example.com'),
+(2, 'Maria Souza', 'Rua B, 456', '987654321', 'maria@example.com');
+
+INSERT INTO Produto (ID_Produto, Nome, Descrição, Preço, Estoque) VALUES
+(1, 'Notebook', 'Notebook de última geração', 3500.00, 10),
+(2, 'Mouse', 'Mouse sem fio', 50.00, 100);
+
+INSERT INTO Pedido (ID_Pedido, Data_Pedido, ID_Cliente) VALUES
+(1, '2025-02-01', 1),
+(2, '2025-02-02', 2);
+
+INSERT INTO Item_Pedido (ID_Item, ID_Pedido, ID_Produto, Quantidade, Preço_Unitário) VALUES
+(1, 1, 1, 1, 3500.00),
+(2, 2, 2, 2, 50.00);
+
+INSERT INTO Categoria (ID_Categoria, Nome) VALUES
+(1, 'Eletrônicos'),
+(2, 'Acessórios');
+
+INSERT INTO Produto_Categoria (ID_Produto, ID_Categoria) VALUES
+(1, 1),
+(2, 2);
