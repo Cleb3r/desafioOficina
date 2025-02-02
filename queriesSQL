@@ -1,0 +1,22 @@
+-- Recuperações simples com SELECT Statement
+SELECT * FROM Cliente;
+
+-- Filtros com WHERE Statement
+SELECT * FROM Produto WHERE Preço > 100.00;
+
+-- Criação de expressões para gerar atributos derivados
+SELECT Nome, Preço, Preço * 1.1 AS Preço_Com_Imposto FROM Produto;
+
+-- Definição de ordenações dos dados com ORDER BY
+SELECT * FROM Pedido ORDER BY Data_Pedido DESC;
+
+-- Condições de filtros aos grupos – HAVING Statement
+SELECT ID_Cliente, COUNT(*) AS Total_Pedidos FROM Pedido GROUP BY ID_Cliente HAVING COUNT(*) > 1;
+
+-- Criação de junções entre tabelas
+SELECT Cliente.Nome, Pedido.ID_Pedido, Produto.Nome AS Produto, Item_Pedido.Quantidade
+FROM Cliente
+JOIN Pedido ON Cliente.ID_Cliente = Pedido.ID_Cliente
+JOIN Item_Pedido ON Pedido.ID_Pedido = Item_Pedido.ID_Pedido
+JOIN Produto ON Item_Pedido.ID_Produto = Produto.ID_Produto;
+
