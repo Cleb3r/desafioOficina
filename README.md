@@ -1,2 +1,2 @@
 # desafioOficina
-Desafio de projeto DIO - Construindo Esquema Conceitual
+Desafio de projeto DIO 
